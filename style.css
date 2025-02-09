@@ -1,27 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const now = new Date();
-    const dayOfWeek = now.getDay(); // Day of the week (0: Sunday, 1: Monday, ...)
-    const hour = now.getHours(); // Current time (0–23)
-
-    // Store the day of the week as an array
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    let timePeriod;
-
-    // Determine the time period
-    if (hour >= 0 && hour < 12) {
-        timePeriod = "0-12"; // 0 to 12
-    } else if (hour >= 12 && hour < 24) {
-        timePeriod = "12-24"; // 12 to 24
-    } else {
-        timePeriod = null; // Not displayed time period
-    }
-
-    // Display the element that matches the day and time period
-    if (timePeriod) {
-        const contentId = `${days[dayOfWeek]}-${timePeriod}`;
-        const contentElement = document.getElementById(contentId);
-        if (contentElement) {
-            contentElement.style.display = "block";
-        }
-    }
-});
+body {
+    background-color: #000000;
+}
+.content {
+    display: none;
+    background-color: #000000;
+    font-size: large;
+    color: #cbcbcb;
+    margin: 100px;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 100px 0 rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
